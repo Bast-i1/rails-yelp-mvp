@@ -1,0 +1,23 @@
+<h1>Welcome to <%= @restaurant.name %></h1>
+
+<p><%= @restaurant.address %></p>
+
+<p></p>
+
+<p>Category: <%= @restaurant.category %></p>
+
+<p></p>
+
+<% @restaurant.reviews.each do |review| %>
+  <p>Review:</p> <%= review.content %>
+  <p></p>
+  <p>Rating:</p> <%= review.rating %>
+<% end %>
+
+<p></p>
+
+<%= link_to new_restaurant_review_path(@restaurant) do %>
+      <p>Post a review ✏️</p>
+<% end %>
+
+<%= link_to "Go back to the restaurants list", restaurants_path, class: "btn btn-outline-warning" %>
