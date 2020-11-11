@@ -11,3 +11,18 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+body {
+  text-align: center;
+}
+
+a:link, a:visited {
+  text-align: center;
+  text-decoration: none;
+}
+
+ul {
+  list-style:none;
+  margin-left:0;
+  padding-left:0;
+}
